@@ -9,11 +9,10 @@ async function printPokemons(contenedor) {
     caja.classList.add("pkmn-container");
     caja.innerHTML = `      
     <div class="sprites-container">
-    <img src=${pk.sprites.back_default} alt=${pk.name}/>
-    
-    <img src="${pk.sprites.front_default} alt=${pk.name}/>
-    <p>${pk.name}</p>
-    </div>`;
+    <img src=${pk.sprites.back_default}>
+    <img src=${pk.sprites.front_default}>
+    </div>
+    <p class='pkmn-name'>${pk.name}</p>`;
     contenedor.appendChild(caja);
   }
 }

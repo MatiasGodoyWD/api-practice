@@ -24,8 +24,10 @@ async function getUrl() {
 async function fetchPkmns() {
   let urls = await getUrl();
   let pkmnData = [];
-  urls.forEach((url) => {
-    getPokemonData(url).then((data) => pkmnData.push(data));
+
+  urls.forEach(async (url) => {
+    let pkmn = await getPokemonData(url);
+    pkmnData.push(pkmn);
   });
   return pkmnData;
 }
