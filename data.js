@@ -1,6 +1,6 @@
 async function getPokemon() {
   let data = await fetch(
-    `https://pokeapi.co/api/v2/pokemon?limit=151&offset=0.`
+    `https://pokeapi.co/api/v2/pokemon?limit=100&offset=800.`
   );
   let pkmnArr = await data.json();
   return pkmnArr;

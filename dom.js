@@ -11,6 +11,8 @@ async function printPokemons(contenedor) {
     <div class="sprites-container">
     <img src=${pk.sprites.back_default}>
     <img src=${pk.sprites.front_default}>
+    <img src=${pk.sprites.back_shiny}>
+    <img src=${pk.sprites.front_shiny}>
     </div>
     <p class='pkmn-name'>${pk.name}</p>`;
     contenedor.appendChild(caja);
