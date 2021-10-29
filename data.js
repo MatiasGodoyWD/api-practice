@@ -1,19 +1,8 @@
-function getData() {
-  let usuarios;
-  fetch("https://reqres.in/api/users?page=2")
-    .then((users) => users.json())
-    .then((users) => {
-      usuarios = users.data;
-      console.log(usuarios);
-
-      let container = document.querySelector(".container");
-      usuarios.map((user) => {
-        let foto = document.createElement("img");
-        foto.src = user.avatar;
-        container.appendChild(foto);
-      });
-      document.querySelector(".loading").style.display = "none";
-    });
+async function getKakuna() {
+  const container = document.querySelector(".container");
+  let data = await fetch("https://pokeapi.co/api/v2/pokemon/kakuna");
+  let kakuna = await data.json();
+  container.innerHTML = `<img src=${kakuna.sprites.front_shiny}></img>
+                                    <p>${kakuna.name}</p>`;
+  return getBeedril();
 }
-
-export { getData };
