@@ -37,4 +37,11 @@
 img {
   width: 12rem;
   height: 12rem;
+  transition: all 0.5s;
+}
+
+img:hover {
+  /* cursor: pointer; */
+  transform: scale(1.25);
+  transition: all 0.5s;
 }
