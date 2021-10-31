@@ -1,6 +1,6 @@
 @font-face {
   font-family: pokemon;
-  src: url(./fonts/Pokemon\ Hollow.ttf) format("truetype");
+  src: url(./fonts/pokemon\ Hollow.ttf) format("truetype");
 }
 
 * {
@@ -15,6 +15,10 @@
   align-items: center;
   justify-content: flex-start;
   width: 100%;
+  background-image: url("./img/backg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 .pkmn-container {
@@ -31,14 +35,13 @@
   justify-content: space-around;
   align-items: center;
   width: 60%;
-  /* background-color: red; */
 }
 
 .pkmn-name {
   font-size: 1.5rem;
   text-transform: uppercase;
   font-family: pokemon;
-  color: red;
+  color: rgb(22, 71, 230);
   font-weight: bold;
 }
 
@@ -46,10 +49,15 @@ img {
   width: 12rem;
   height: 12rem;
   transition: all 0.5s;
+  border: 3px solid rgb(23, 146, 202);
+  border-radius: 15px;
+  background-color: rgba(66, 66, 66, 0.37);
 }
 
 img:hover {
-  /* cursor: pointer; */
+  cursor: pointer;
   transform: scale(1.25);
   transition: all 0.5s;
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
 }

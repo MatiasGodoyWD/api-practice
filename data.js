@@ -1,11 +1,13 @@
-//Traer la data desde el pokemon 0(offset) al 151(limit)
+//Traer la data desde el pokemon 0(offset) al 251(limit)
 // Me trae un array cuyos objetos representan a los pokemons, y tienen solo su name y una url al resto de la data.
 async function getPokemon() {
+  console.time("first");
   let data = await fetch(
-    `https://pokeapi.co/api/v2/pokemon?limit=151&offset=0.`
+    `https://pokeapi.co/api/v2/pokemon?limit=251&offset=0.`
   );
   let pkmnArr = await data.json();
 
+  console.timeEnd("first");
   return pkmnArr;
 }
 
@@ -18,23 +20,28 @@ async function getPokemonData(url) {
 
 //Traerme una lista de las url para poder despues traerme la data de cada pokemon
 async function getUrl() {
+  console.time("urls");
   let pokemons = await getPokemon();
-  pokemons = pokemons.results;
   let urlArray = [];
-  pokemons.forEach((pkmn) => urlArray.push(pkmn.url));
+  for (const result of pokemons.results) {
+    urlArray.push(result.url);
+  }
 
+  console.timeEnd("urls");
   return urlArray;
 }
 
 // Me traigo los datos de todos los pkmns del rango dado en un arr
 async function fetchPkmns() {
+  console.time("fetchpkmns");
   let urls = await getUrl();
   let pkmnData = [];
-
-  urls.forEach(async (url) => {
+  for (const url of urls) {
     let pkmn = await getPokemonData(url);
     pkmnData.push(pkmn);
-  });
+  }
+
+  console.timeEnd("fetchpkmns");
   return pkmnData;
 }
 

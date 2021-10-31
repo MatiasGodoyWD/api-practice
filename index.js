@@ -1,9 +1,9 @@
 import { printPokemons } from "./dom.js";
 
 function main() {
-  console.time("time");
+  console.time("main");
   const container = document.querySelector(".container");
   printPokemons(container);
-  console.timeEnd("time");
+  console.timeEnd("main");
 }
 main();
