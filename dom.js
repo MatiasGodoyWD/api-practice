@@ -1,8 +1,10 @@
 import { fetchPkmns } from "./data.js";
 
+//Imprimir los pkmns en pantalla
 async function printPokemons(contenedor) {
   let arrPkmns = await fetchPkmns();
-  console.log(arrPkmns);
+
+  //Sin la linea que sigue no funciona, y no entiendo por que
   await fetchPkmns();
   for (const pk of arrPkmns) {
     let caja = document.createElement("div");
