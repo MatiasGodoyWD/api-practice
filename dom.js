@@ -3,9 +3,10 @@ import { fetchPkmns } from "./data.js";
 //Imprimir los pkmns en pantalla
 async function printPokemons(contenedor) {
   let arrPkmns = await fetchPkmns();
-
   //Sin la linea que sigue no funciona, y no entiendo por que
   await fetchPkmns();
+  arrPkmns.sort((a, b) => a.order - b.order);
+
   for (const pk of arrPkmns) {
     let caja = document.createElement("div");
     caja.classList.add("pkmn-container");

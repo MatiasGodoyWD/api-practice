@@ -1,3 +1,8 @@
+@font-face {
+  font-family: pokemon;
+  src: url(./fonts/Pokemon\ Hollow.ttf) format("truetype");
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -32,6 +37,9 @@
 .pkmn-name {
   font-size: 1.5rem;
   text-transform: uppercase;
+  font-family: pokemon;
+  color: red;
+  font-weight: bold;
 }
 
 img {
