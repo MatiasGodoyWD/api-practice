@@ -2,7 +2,6 @@ import { fetchPkmns } from "./data.js";
 
 //Imprimir los pkmns en pantalla
 async function printPokemons(contenedor) {
-  console.time("print");
   let arrPkmns = await fetchPkmns();
 
   arrPkmns.sort((a, b) => a.order - b.order);
@@ -21,7 +20,6 @@ async function printPokemons(contenedor) {
     `;
     contenedor.appendChild(caja);
   }
-  console.timeEnd("print");
 }
 
 export { printPokemons };
