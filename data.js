@@ -5,7 +5,6 @@ async function getPokemon() {
     `https://pokeapi.co/api/v2/pokemon?limit=251&offset=0.`
   );
   let pkmnArr = await data.json();
-  console.log(pkmnArr);
 
   return pkmnArr;
 }
