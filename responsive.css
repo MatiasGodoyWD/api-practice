@@ -1,0 +1,45 @@
+@media (min-width: 300px) and (max-width: 1000px) {
+  @media (min-width: 300px) and (max-width: 330px) {
+    .poke__name {
+      font-size: 1.5rem;
+    }
+  }
+  .pokedex-container {
+    width: 90%;
+    backdrop-filter: unset;
+    background-color: rgba(255, 255, 255, 0);
+  }
+
+  .pkmn-container {
+    flex-direction: column;
+    backdrop-filter: blur(2px);
+    background-color: rgba(255, 255, 255, 0.089);
+    padding: 3rem;
+    width: 100%;
+    height: auto;
+  }
+
+  .img__container {
+    width: 100%;
+  }
+
+  .poke__info {
+    width: 100%;
+    height: 12rem;
+    align-items: center;
+  }
+
+  .physicalInfo__container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .physicalInfo {
+    display: block;
+    padding: 0.3rem;
+    width: 100%;
+  }
+}

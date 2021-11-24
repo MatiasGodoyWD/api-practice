@@ -46,10 +46,10 @@ async function printPokemons() {
             .join("")}  
           </div>
           <div class="physicalinfo__container">
-            <span class="physicalinfo"><span class="highlight">Height : </span>${
+            <span class="physicalInfo"><span class="highlight">Height : </span>${
               pkmn.height / 10
             } Mts.</span>
-            <span class="physicalinfo"><span class="highlight">Weight : </span>${
+            <span class="physicalInfo"><span class="highlight">Weight : </span>${
               pkmn.weight / 10
             } Kg.</span>
           </div>
