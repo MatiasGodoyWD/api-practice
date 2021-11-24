@@ -1,7 +1,12 @@
 # Detalles del proyecto
 
-    Proyecto creado con el fin de realizar practicas sobre asincronismo con async y await y recuperación de datos desde una api
+    El proyecto consiste en la realización de una pokedex custom que muestre los 898 pokemons mediante el uso de la API de pokemon.
+    Esta adaptado a todas las pantallas
 
-# Tecnologias utilizadas
+# Tecnologías utilizadas
 
-    Html , Css y JS
+    Html Css y javascript
+
+# Link para preview
+
+    https://scrolling-pokedex.vercel.app/
