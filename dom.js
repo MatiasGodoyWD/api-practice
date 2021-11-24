@@ -16,7 +16,7 @@ let observer = new IntersectionObserver(
     });
   },
   {
-    rootMargin: "0px 0px 0px 0px",
+    rootMargin: "0px 20px 0px 0px",
     treshhold: 1.0,
   }
 );
